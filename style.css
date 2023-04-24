@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
     background-color: #f8f8f8;
     color: #333;
     font-family: Lato, sans-serif;
@@ -12,11 +12,11 @@ body {
     text-align: right;
 }
 
-.header img {
+.header .matrix {
     width: 100%;
 }
 
-.header .more_inf {
+.header .more {
     font-family: fantasy, cursive;
 }
 
@@ -42,7 +42,7 @@ body {
     display: flex;
 }
 
-ul {
+.list {
     margin: 0;
     padding: 0px;
 }
@@ -149,21 +149,21 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#completed-tasks label {
+.list#completed-tasks label {
     text-decoration: line-through
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.list li input[type=text] {
     display: none
 }
 
-ul li.editMode input[type=text] {
+.list li.editMode input[type=text] {
     display: inline-block;
     width: 224px
 }
 
-ul li.editMode label {
+.list li.editMode label {
     display: none;
 }
