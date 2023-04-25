@@ -33,7 +33,8 @@
     margin: 0 auto 0;
 }
 
-.task {
+.label,
+.input.input_text {
     width: 56%;
     display: inline-block;
     flex-grow: 1
@@ -82,6 +83,7 @@
     text-transform: uppercase;
     display: block;
     margin: 0 0 20px;
+    width: 100%;
 }
 
 .input.input_text {
