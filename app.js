@@ -67,7 +67,6 @@ let taskCompleted = function () {
     bindTaskEvents(listItem, taskIncomplete);
 }
 
-
 let taskIncomplete = function () {
     let listItem = this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
@@ -75,14 +74,13 @@ let taskIncomplete = function () {
 }
 addButton.addEventListener("click", addTask);
 
-
 let bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     let checkBox = taskListItem.querySelector(".input_checkbox");
     let editButton = taskListItem.querySelector("button.button_edit");
     let deleteButton = taskListItem.querySelector("button.button_delete");
     editButton.addEventListener("click", editTask);
     deleteButton.addEventListener("click", deleteTask);
-    checkBox.addEventListener("change", checkBoxEventHandler);
+    checkBox.onchange = checkBoxEventHandler;
 }
 for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
     bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
