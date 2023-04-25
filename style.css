@@ -1,7 +1,7 @@
 .body {
     background-color: #f8f8f8;
     color: #333;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .header {
@@ -11,12 +11,12 @@
     text-align: right;
 }
 
-.header .matrix {
+.header .header__image {
     width: 100%;
 }
 
-.header .more {
-    font-family: fantasy, cursive;
+.header .header__link {
+    font-family: "fantasy", cursive;
 }
 
 @media (max-width: 768px) {
@@ -48,43 +48,43 @@
     padding: 0;
 }
 
-li,
-h3 {
+.item,
+.title {
     list-style: none;
 }
 
-input,
-button {
+.input,
+.button {
     outline: none;
 }
 
-button {
+.button {
     background: none;
     border: 0;
     color: #888;
     font-size: 15px;
     width: 60px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     color: #3a3A3a;
 }
 
-/* Heading */
-.subtitle,
-label[for="new-task"] {
+.title,
+.label.label_new-task {
     color: #333;
     font-weight: 700;
     font-size: 15px;
     border-bottom: 2px solid #333;
     padding: 30px 0 10px;
-    margin: 0;
     text-transform: uppercase;
+    display: block;
+    margin: 0 0 20px;
 }
 
-input[type="text"] {
+.input.input_text {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -93,75 +93,67 @@ input[type="text"] {
     border: 1px solid #dDd;
     background: #FFF;
     border-radius: 6px;
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     color: #888;
 }
 
-input[type="text"]:focus {
+.input.input_text:focus {
     color: #333;
 }
 
-label[for="new-task"] {
-    display: block;
-    margin: 0 0 20px;
-}
-
-input#new-task {
+.input.input_text_new {
     width: 318px;
 }
 
-li {
+.item {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-li > * {
     vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.item .input.input_checkbox {
     margin: 0 10px;
 }
 
-li > label {
+.item .label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
 }
 
-li > input[type="text"] {
+.item .input.input_text {
     width: 226px
 }
 
-button.delete img {
+.button.button_delete img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.button.button_delete img:hover {
     transform: rotateZ(0);
 }
 
-.list#completed-tasks label {
+.list.list_completed-tasks .label {
     text-decoration: line-through;
     color: #888;
 }
 
-.list li input[type=text] {
+.list li input.input_text {
     display: none
 }
 
-.list li.editMode input[type=text] {
+.list li.editMode input.input_text {
     display: inline-block;
     width: 224px
 }
 
-.list li.editMode label {
+.list li.editMode .label {
     display: none;
 }
